@@ -50,6 +50,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer dir.Close()
 	files, err := dir.Readdir(0)
 	if err != nil {
 		log.Fatal(err)
